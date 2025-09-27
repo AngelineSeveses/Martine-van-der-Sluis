@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Portfolio - Martine van der Sluis-den Dekker MSc</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="custom.css" />
+    <style></style>
+  </head>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeEls = document.querySelectorAll(".text-fade-up");
+
+  const showOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    fadeEls.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < triggerBottom) {
+        el.classList.add("visible");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", showOnScroll);
+  showOnScroll(); // run once on page load
+});
+</script>
+
+  <body>
+    <!-- Header -->
+
+    <header id="header">
+      <div class="container">
+        <div
+          class="header-container d-flex justify-content-between align-items-center position-relative"
+        >
+          <a href="index.html" class="logo">
+            Martine van der Sluis<span>.</span>
+          </a>
+
+          <nav class="d-flex align-items-center">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+              <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Desktop Navigation -->
+            <ul
+              class="navbar-nav d-flex flex-row list-unstyled mb-0 desktop-nav"
+            >
+              <li class="nav-item me-4">
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item me-4">
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Mobile Navigation Menu -->
+            <div class="mobile-nav-menu" id="mobileNavMenu">
+              <a href="index.html" class="nav-link">Home</a>
+              <a href="portfolio.html" class="nav-link">Portfolio</a>
+              <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+          </nav>
+
+          <a href="contact.html" class="nav-btn btn"> Neem Contact Op </a>
+        </div>
+      </div>
+    </header>
+    <section
+      id="home"
+      class="portfolio-hero d-flex align-items-end compute-hero"
+    >
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="hero-card p-md-3">
+            <h1 class="text-center mb-4 lh-sm text-fade-up">Neem Contact Op</h1>
+
+            <p class="fs-5 fw-normal lh-base text-center text-white text-fade-up">
+              Ik hoor graag van je! Neem gerust contact op met al je vragen,
+              ideeën of samenwerkingsvoorstellen. Ik reageer zo snel mogelijk en
+              denk graag met je mee over de juiste oplossing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------ -->
+
+    <!-- --------------------Contact Section-------------------- -->
+    <section class="contact-section section-fade-up">
+      <div class="container">
+        <div class="row g-5 align-items-end position-relative">
+          <div class="col-lg-6">
+            <div class="section-heading">
+              <div class="section-tag d-flex align-items-center gap-2 mb-3">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12.5061 3.43558C12.8178 3.16282 13.2917 3.1944 13.5644 3.50613L20.5644 11.5061C20.8119 11.7889 20.8119 12.2111 20.5644 12.4939L13.5644 20.4939C13.2917 20.8056 12.8178 20.8372 12.5061 20.5644C12.1944 20.2917 12.1628 19.8179 12.4356 19.5061L18.3472 12.75H4C3.58579 12.75 3.25 12.4142 3.25 12C3.25 11.5858 3.58579 11.25 4 11.25H18.3472L12.4356 4.49389C12.1628 4.18216 12.1944 3.70834 12.5061 3.43558Z"
+                    fill="#363636"
+                  />
+                </svg>
+                Laten We Verbinden
+              </div>
+              <h2 class="main-title">
+                Neem <span class="heading-highlight"> Contact Op</span>
+              </h2>
+              <p>
+                Vul het onderstaande formulier in en ik neem zo spoedig mogelijk
+                contact met u op.
+              </p>
+            </div>
+            <img
+              class="contact-image img-fluid"
+              src="img/contact.png"
+              alt="contact image"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- contact-form -->
+          <div class="col-lg-6 a1">
+            <div class="contact-form-container">
+              <form class="contact-form" id="contactForm">
+                <div class="row g-3">
+                  <!-- Name and Email fields -->
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        class="form-control contact-input"
+                        id="userName"
+                        placeholder="Uw naam"
+                        required
+                      />
+                      <label for="userName">Uw naam</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input
+                        type="email"
+                        class="form-control contact-input"
+                        id="userEmail"
+                        placeholder="Uw e-mailadres"
+                        required
+                      />
+                      <label for="userEmail">Uw e-mailadres</label>
+                    </div>
+                  </div>
+
+                  <!-- Subject field -->
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        class="form-control contact-input"
+                        id="subject"
+                        placeholder="Onderwerp"
+                      />
+                      <label for="subject">Onderwerp</label>
+                    </div>
+                  </div>
+
+                  <!-- Message field -->
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <textarea
+                        class="form-control contact-input"
+                        id="message"
+                        placeholder="Uw bericht"
+                        style="height: 300px"
+                        required
+                      ></textarea>
+                      <label for="message">Uw bericht</label>
+                    </div>
+                  </div>
+
+                  <!-- Submit button -->
+                  <div class="col-12">
+                    <button
+                      type="submit"
+                      href="#portfolio"
+                      class="btn btn-discover d-inline-flex align-items-center gap-3"
+                    >
+                      <span>Verstuur bericht</span>
+                      <div class="btn-arrow">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5 12H19M19 12L12 5M19 12L12 19"
+                            stroke="white"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Brand Column -->
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-brand">
+              <h4 class="footer-title mb-3">
+                Martine van der Sluis-den Dekker MSc
+              </h4>
+              <p class="footer-description">Ervaren Physician Assistant</p>
+            </div>
+          </div>
+
+          <!-- Quick Links Column -->
+          <div
+            class="col-lg-3 col-md-6 d-flex justify-content-center justify-content-lg-end"
+          >
+            <div class="footer-links">
+              <h5 class="footer-heading mb-3 d-flex flex-column">
+                Snelle koppelingen
+                <span
+                  ><svg
+                    width="50"
+                    height="3"
+                    viewBox="0 0 50 3"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect y="0.0976562" width="50" height="2" fill="#2D9B93" />
+                  </svg>
+                </span>
+              </h5>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <a href="index.html" class="footer-link">Home</a>
+                </li>
+                <li class="mb-2">
+                  <a href="portfolio.html" class="footer-link"
+                    >Mijn Portfolio</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="contact.html" class="footer-link">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact Info Column -->
+          <div
+            class="col-lg-5 col-md-12 d-flex justify-content-center justify-content-lg-end"
+          >
+            <div class="footer-contact">
+              <h5 class="footer-heading mb-3 d-flex flex-column">
+                Contactgegevens
+                <span
+                  ><svg
+                    width="50"
+                    height="3"
+                    viewBox="0 0 50 3"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect y="0.0976562" width="50" height="2" fill="#2D9B93" />
+                  </svg>
+                </span>
+              </h5>
+              <div class="contact-items">
+                <div class="contact-item d-flex align-items-center mb-3">
+                  <div class="contact-icon-wrapper me-3">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 0C6.13 0 3 3.13 3 7C3 12.25 10 20 10 20S17 12.25 17 7C17 3.13 13.87 0 10 0ZM10 9.5C8.62 9.5 7.5 8.38 7.5 7C7.5 5.62 8.62 4.5 10 4.5C11.38 4.5 12.5 5.62 12.5 7C12.5 8.38 11.38 9.5 10 9.5Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                  <span class="contact-text">
+                    Regio Rotterdam / Zuid-Hollan</span
+                  >
+                </div>
+                <div class="contact-item d-flex align-items-center">
+                  <div class="contact-icon-wrapper me-3">
+                    <svg
+                      width="20"
+                      height="16"
+                      viewBox="0 0 20 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18 0H2C0.9 0 0.01 0.9 0.01 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                  <a
+                    href="mailto:martinevandersluis@outlook.com"
+                    class="contact-text footer-link text-nowrap"
+                  >
+                    martinevandersluis@outlook.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom mt-5 pt-4">
+          <div class="text-center">
+            <p class="copyright-text mb-0">
+              © 2025 Martine van der Sluis - Physician Assistant. Alle rechten
+              voorbehouden.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- FIX: Bootstrap JS bundle added here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="custom.js"></script>
+  </body>
+</html>
