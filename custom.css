@@ -10,7 +10,7 @@
   --heading-color: #1d202b;
   --text-color: #6c757d;
   --card-color: #f8f9fa;
-  --heading-highlight-color: #00ff77;
+  --heading-highlight-color: #0a9f8b;
   --primary-color: #0a9f8b;
 
   /* Responsive font sizes */
@@ -1578,3 +1578,4 @@ form {
     transform: translateY(0);
   }
 }
+
