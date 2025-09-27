@@ -398,7 +398,7 @@ header.scrolled .header-container {
 }
 
 .highlight {
-  color: #02f978;
+  color: #0a9f8b;
   font-weight: 600;
 }
 
@@ -1578,4 +1578,5 @@ form {
     transform: translateY(0);
   }
 }
+
 
