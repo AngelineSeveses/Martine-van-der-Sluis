@@ -21,24 +21,24 @@
     <style></style>
   </head>
   <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const fadeEls = document.querySelectorAll(".text-fade-up");
+    document.addEventListener("DOMContentLoaded", () => {
+      const fadeEls = document.querySelectorAll(".text-fade-up");
 
-  const showOnScroll = () => {
-    const triggerBottom = window.innerHeight * 0.85;
+      const showOnScroll = () => {
+        const triggerBottom = window.innerHeight * 0.85;
 
-    fadeEls.forEach(el => {
-      const top = el.getBoundingClientRect().top;
-      if (top < triggerBottom) {
-        el.classList.add("visible");
-      }
+        fadeEls.forEach((el) => {
+          const top = el.getBoundingClientRect().top;
+          if (top < triggerBottom) {
+            el.classList.add("visible");
+          }
+        });
+      };
+
+      window.addEventListener("scroll", showOnScroll);
+      showOnScroll(); // run once on page load
     });
-  };
-
-  window.addEventListener("scroll", showOnScroll);
-  showOnScroll(); // run once on page load
-});
-</script>
+  </script>
 
   <body>
     <!-- Header -->
@@ -90,12 +90,16 @@ document.addEventListener("DOMContentLoaded", () => {
       id="home"
       class="portfolio-hero d-flex align-items-end compute-hero"
     >
-      <div class="container ">
+      <div class="container">
         <div class="row g-4 align-items-center">
           <div class="hero-card p-md-3">
-            <h1 class="text-center mb-4 lh-sm text-fade-up">Welkom in Mijn Portfolio</h1>
+            <h1 class="text-center mb-4 lh-sm text-fade-up">
+              Welkom in Mijn Portfolio
+            </h1>
 
-            <p class="fs-5 fw-normal lh-base text-center text-white text-fade-up">
+            <p
+              class="fs-5 fw-normal lh-base text-center text-white text-fade-up"
+            >
               Overzicht van mijn achtergrond, werkervaring en specialisaties in
               de gezondheidszorg. Dit portfolio toont mijn vaardigheden,
               consulten, certificeringen en beschikbaarheid.
@@ -290,14 +294,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 >
                   <div class="accordion-body">
                     <ul class="list-unstyled">
+                      <li class="mb-2">• Consultduur 15 minuten</li>
+                      <li class="mb-2">• Geen spoedvisites</li>
                       <li class="mb-2">
-                        • Consultduur 15 minuten
-                      </li>
-                      <li class="mb-2">
-                        • Geen spoedvisites
-                      </li>
-                      <li class="mb-2">
-                        • Consultvoering bij alle patiëntencategorieën (mits huisarts aanwezig)
+                        • Consultvoering bij alle patiëntencategorieën (mits
+                        huisarts aanwezig)
                       </li>
                     </ul>
                   </div>
@@ -325,22 +326,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 >
                   <div class="accordion-body">
                     <ul class="list-unstyled">
-                      <li class="mb-2">
-                        • MicroHis
-                      </li>
-                      <li class="mb-2">
-                        • Medicom
-                      </li>
-                      <li class="mb-2">
-                        • TetraHis
-                      </li>
+                      <li class="mb-2">• MicroHis</li>
+                      <li class="mb-2">• Medicom</li>
+                      <li class="mb-2">• TetraHis</li>
                       <li class="mb-2">• Promedico</li>
-                      <li class="mb-2">
-                        • VIP-live
-                      </li>
-                      <li class="mb-2">
-                        • Medicore
-                      </li>
+                      <li class="mb-2">• VIP-live</li>
+                      <li class="mb-2">• Medicore</li>
                     </ul>
                   </div>
                 </div>
@@ -373,19 +364,13 @@ document.addEventListener("DOMContentLoaded", () => {
                       <li class="mb-2">
                         • BIG registratie verpleegkundige 89003503030
                       </li>
+                      <li class="mb-2">• eigen AGB code</li>
                       <li class="mb-2">
-                        • eigen AGB code
+                        • KVK : MSD-PA Huisartsenzorg en GGZ 89337581
                       </li>
-                      <li class="mb-2">• KVK : MSD-PA Huisartsenzorg en GGZ 89337581</li>
-                      <li class="mb-2">
-                        • NAPA kwaliteitsregister 1000834
-                      </li>
-                      <li class="mb-2">
-                        • aangesloten bij het H3-Netwerk
-                      </li>
-                       <li class="mb-2">
-                        • ⁠⁠aangesloten bij het ADHD-Netwerk
-                      </li>
+                      <li class="mb-2">• NAPA kwaliteitsregister 1000834</li>
+                      <li class="mb-2">• aangesloten bij het H3-Netwerk</li>
+                      <li class="mb-2">• ⁠⁠aangesloten bij het ADHD-Netwerk</li>
                     </ul>
                   </div>
                 </div>
@@ -411,9 +396,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   data-bs-parent="#portfolioAccordion"
                 >
                   <div class="accordion-body">
-                     <ul class="list-unstyled">
+                    <ul class="list-unstyled">
                       <li class="mb-2">
-                        • Ik ben beschikbaar voor waarnemingen in de regio Zuid Holland.
+                        • Ik ben beschikbaar voor waarnemingen in de regio Zuid
+                        Holland.
                       </li>
                     </ul>
                   </div>
@@ -440,7 +426,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   data-bs-parent="#portfolioAccordion"
                 >
                   <div class="accordion-body">
-                     <ul class="list-unstyled">
+                    <ul class="list-unstyled">
                       <li class="mb-2">
                         • Praktijkverpleegkundige/POH - Hogeschool Rotterdam
                       </li>
@@ -448,27 +434,24 @@ document.addEventListener("DOMContentLoaded", () => {
                         • International Community Health - Hogeschool Leiden
                       </li>
                       <li class="mb-2">
-                        • Tropenopleiding (basic + advanced) - Havenziekenhuis Rotterdam
-                      </li>
-                      <li class="mb-2">• Verpleegkunde A Ikazia ziekenhuis Rotterdam</li>
-                      <li class="mb-2">
-                        • ADHD trainingen: ADHD diagnostiek en behandeling, DIVA training, medicatie instellen, coaching/ PsyQ
+                        • Tropenopleiding (basic + advanced) - Havenziekenhuis
+                        Rotterdam
                       </li>
                       <li class="mb-2">
-                        • ACT cursus/ Act in ACTie Academy
-                      </li>
-                       <li class="mb-2">
-                        • Langerhans opleiding
-                      </li>
-                       <li class="mb-2">
-                        • Caspir opleiding
+                        • Verpleegkunde A Ikazia ziekenhuis Rotterdam
                       </li>
                       <li class="mb-2">
-                        • Jaarlijks 40 accreditatiepunten aan scholing via PE/online
+                        • ADHD trainingen: ADHD diagnostiek en behandeling, DIVA
+                        training, medicatie instellen, coaching/ PsyQ
                       </li>
-                       <li class="mb-2">
-                        • Jaarlijks BLS/AED training
+                      <li class="mb-2">• ACT cursus/ Act in ACTie Academy</li>
+                      <li class="mb-2">• Langerhans opleiding</li>
+                      <li class="mb-2">• Caspir opleiding</li>
+                      <li class="mb-2">
+                        • Jaarlijks 40 accreditatiepunten aan scholing via
+                        PE/online
                       </li>
+                      <li class="mb-2">• Jaarlijks BLS/AED training</li>
                     </ul>
                   </div>
                 </div>

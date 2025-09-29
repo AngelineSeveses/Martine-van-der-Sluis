@@ -21,24 +21,24 @@
     <style></style>
   </head>
   <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const fadeEls = document.querySelectorAll(".text-fade-up");
+    document.addEventListener("DOMContentLoaded", () => {
+      const fadeEls = document.querySelectorAll(".text-fade-up");
 
-  const showOnScroll = () => {
-    const triggerBottom = window.innerHeight * 0.85;
+      const showOnScroll = () => {
+        const triggerBottom = window.innerHeight * 0.85;
 
-    fadeEls.forEach(el => {
-      const top = el.getBoundingClientRect().top;
-      if (top < triggerBottom) {
-        el.classList.add("visible");
-      }
+        fadeEls.forEach((el) => {
+          const top = el.getBoundingClientRect().top;
+          if (top < triggerBottom) {
+            el.classList.add("visible");
+          }
+        });
+      };
+
+      window.addEventListener("scroll", showOnScroll);
+      showOnScroll(); // run once on page load
     });
-  };
-
-  window.addEventListener("scroll", showOnScroll);
-  showOnScroll(); // run once on page load
-});
-</script>
+  </script>
 
   <body>
     <!-- Header -->
@@ -93,7 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="hero-card p-md-3">
             <h1 class="text-center mb-4 lh-sm text-fade-up">Neem Contact Op</h1>
 
-            <p class="fs-5 fw-normal lh-base text-center text-white text-fade-up">
+            <p
+              class="fs-5 fw-normal lh-base text-center text-white text-fade-up"
+            >
               Ik hoor graag van je! Neem gerust contact op met al je vragen,
               ideeën of samenwerkingsvoorstellen. Ik reageer zo snel mogelijk en
               denk graag met je mee over de juiste oplossing.
@@ -136,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 contact met u op.
               </p>
             </div>
+
             <img
               class="contact-image img-fluid"
               src="img/contact.png"
