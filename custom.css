@@ -110,6 +110,17 @@ header .container {
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
+.gray-header-container {
+  background-color: rgb(0 0 0 / 51%) !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 100px;
+  padding: 8px 32px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+/* #portfolio-header .header-container {
+;
+} */
 
 /* Scrolled state */
 header.scrolled .header-container {
@@ -296,6 +307,23 @@ header.scrolled .header-container {
 }
 
 .portfolio-hero {
+  /* background: linear-gradient(
+    180deg,
+    rgba(67, 96, 99, 1) 0%,
+    rgba(7, 44, 48, 1) 100%
+  ); */
+  position: relative;
+  padding-top: clamp(5rem, 12vw, 8rem);
+  padding-bottom: var(--spacing-lg);
+
+  h1 {
+    color: var(--heading-color);
+  }
+  .hero-card p {
+    color: var(--text-color);
+  }
+}
+.portfolio-hero-contact {
   background: linear-gradient(
     180deg,
     rgba(67, 96, 99, 1) 0%,
@@ -368,7 +396,18 @@ header.scrolled .header-container {
   object-fit: cover;
   border-radius: 20px;
 }
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 16px;
+  width: 100%;
+}
 
+.about-cards .about-cards-content {
+  flex-basis: 180px;
+  flex-grow: 1;
+}
 .contact-image {
   height: 300px;
   width: 100%;
