@@ -301,6 +301,7 @@ header.scrolled .header-container {
   position: relative;
   /* padding-top: clamp(5rem, 12vw, 8rem);
   padding-bottom: var(--spacing-lg); */
+  align-items: center !important; /* override align-items-end in HTML */
 }
 .hero .container {
   padding-bottom: 0;
@@ -581,7 +582,7 @@ header.scrolled .header-container {
   font-size: var(--fs-body);
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0, 184, 148, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   gap: var(--spacing-sm);
 }
 
@@ -824,6 +825,52 @@ header.scrolled .header-container {
     --fs-h1: 4rem;
     --fs-h2: 3rem;
     --spacing-xl: 8rem;
+  }
+}
+
+/* Center hero image and keep it aligned with the text */
+.hero {
+  align-items: center !important; /* override align-items-end in HTML */
+}
+
+.profile-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.profile-image {
+  border-radius: 20px;
+  width: 100%;
+  max-width: 420px; /* adjust as needed */
+  height: auto;
+  max-height: 60vh; /* keeps image from overflowing viewport */
+  object-fit: contain; /* preserve full image, change to cover if you prefer crop */
+  box-shadow: 2px 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Larger screens: allow bigger image */
+@media (max-width: 992px) {
+  .profile-image-wrapper {
+    align-items: start;
+    justify-content: start;
+  }
+  .profile-image {
+    /* max-width: 520px; */
+    max-height: 70vh;
+  }
+}
+
+/* Small screens: reduce image size */
+@media (max-width: 991.98px) {
+  .profile-image {
+    /* max-width: 320px;
+    max-height: 40vh; */
+  }
+  .hero-card {
+    margin-bottom: 24px !important; /* keep spacing on mobile */
   }
 }
 
